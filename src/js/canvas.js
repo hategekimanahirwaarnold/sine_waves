@@ -19,8 +19,8 @@ canvas.height = innerHeight
  * l: 50
  */
 const strokeColor = {
-  h: 200,
-  s: 100,
+  h: 222,
+  s: 90,
   l: 50
 }
 /**
@@ -30,8 +30,8 @@ const strokeColor = {
  */
 const wave = {
   y: canvas.height / 2,
-  length: 0.003,
-  amplitude: 212,
+  length: -0.003,
+  amplitude: 230,
   frequency: 0.01
 }
 /**
@@ -44,7 +44,7 @@ const backColor = {
   r: 0,
   g: 0,
   b: 0,
-  a: 0.0165
+  a: 0.040
 }
 const waveFolder = gui.addFolder('wave');
 waveFolder.add(wave, 'y', 0, canvas.height)
@@ -59,7 +59,7 @@ strokeFolder.add(strokeColor, 's', 0, 100)
 strokeFolder.add(strokeColor, 'l', 0, 100)
 // strokeFolder.open();
 
-const backFolder = gui.addFolder('back color')
+const backFolder = gui.addFolder('background color')
 backFolder.add(backColor, 'r', 0, 255)
 backFolder.add(backColor, 'g', 0, 255)
 backFolder.add(backColor, 'b', 0, 255)
